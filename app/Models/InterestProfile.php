@@ -27,7 +27,7 @@ class InterestProfile extends Model
 
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(Category::class)
+        return $this->belongsToMany(Category::class, 'interest_profile_category')
             ->withPivot('preference_level');
     }
 }
